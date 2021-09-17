@@ -1,12 +1,10 @@
 # Stephanie Pittman
+# CSCI 220
 
+# This program will calculate the monthly interest charge after input is given from the user
 
-# print that this program calculates the value of investment after 10 years
-# input the initial principal from the user
-# input the annual percentage rate
-# loop through 10 years
-# calculate principal + interest
-# print the result
+#Certificate of Authenticity: I certify that this assignment is entirely my work.
+
 def main():
     print("This program calculates the value of investment after 10 years")
     apr      = eval(input("enter the annual interest rate: "))
