@@ -22,20 +22,20 @@ def main():
     complete_cars = 0
 
     # first outer loop
-    for r in range(roads):
+    for day_count in range(roads):
 
-        days = int(input("How many days was road " + str(r + 1) + " surveyed? "))
+        days = int(input("How many days was road " + str(day_count + 1) + " surveyed? "))
 
         cars_total = 0
 
         # second loop
-        for d in range(days):
-            cars = int(input("How many cars were surveyed on road " + str(d + 1) + "? "))
+        for car_count in range(days):
+            cars = int(input("How many cars were surveyed on road " + str(car_count + 1) + "? "))
             cars_total = cars_total + cars
 
         avg = cars_total / days
 
-        print(avg)
+        print("the average is:" + str(round(avg, 2)))
         complete_cars += cars_total
         complete_days += days
 
@@ -46,9 +46,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
