@@ -7,6 +7,10 @@ Problem: Calculate the average number of vehicles that travel each road per day.
 
 Certificate of Authenticity:
 I certify that this assignment is entirely my work.
+
+Input : User information from DOT
+Output: Average cars per road per day ; Average cars on all roads
+
 """
 
 def main():
@@ -39,8 +43,6 @@ def main():
 
     print("Total amount of vehicles traveled on all roads: " + str(complete_cars))
     print("Average number of vehicles per road: " + str(round(avg2, 2)))
-
-main()
 
 if __name__ == '__main__':
     main()
