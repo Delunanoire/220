@@ -1,0 +1,52 @@
+"""
+Name: Stephanie Pittman
+traffic.py
+
+Problem: Calculate the average number of vehicles that travel each road per day.
+         Calculate the overall number and average of vehicles on all roads.
+
+Certificate of Authenticity:
+I certify that this assignment is entirely my work.
+"""
+
+def main():
+    # number of roads
+    roads = int(input("How many roads were surveyed? "))
+
+    # counters
+    complete_days = 0
+    complete_cars = 0
+
+    # first outer loop
+    for r in range(roads):
+
+        days = int(input("How many days was road " + str(r + 1) + " surveyed? "))
+
+        cars_total = 0
+
+        # second loop
+        for d in range(days):
+            cars = int(input("How many cars were surveyed on road " + str(d + 1) + "? "))
+            cars_total = cars_total + cars
+
+        avg = cars_total / days
+
+        print(avg)
+        complete_cars += cars_total
+        complete_days += days
+
+    avg2 = complete_cars / roads
+
+    print("Total amount of vehicles traveled on all roads: " + str(complete_cars))
+    print("Average number of vehicles per road: " + str(round(avg2, 2)))
+
+main()
+
+if __name__ == '__main__':
+    main()
+
+
+
+
+
+
