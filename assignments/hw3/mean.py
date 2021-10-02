@@ -9,23 +9,28 @@
 # the inputs will be from the user
 # the output will be
 
-from math import *
+from math import sqrt
 def main():
     n = eval(input("Enter the values to be entered: "))
-    n = int(n)
-    total = 0
-    value = 0
+    acc = 0
+    harm_acc = 0
+    rms_acc = 0
+    geo_acc = 1
 
     for i in range(n):
-        total = total + 1
-        value += int(input("Enter value " + str(total) + ": "))
+        number = int(input("Enter value " + str(i + 1) + ": "))
+        acc = acc + number
+        harm_acc = harm_acc + 1 / number
+        rms_acc = rms_acc + (number) ** 2
+        geo_acc = geo_acc * number
 
+    harm_avg = n / harm_acc
+    rms_avg = sqrt(rms_acc / n)
+    geo_avg = (geo_acc) ** (1 / n)
 
-        geo_mean = value ** (1/n)
-        har_mean = value / n
-        rms_mean = value + 1
-
-    print(round(geo_mean, 2), round(har_mean, 3), round(rms_mean, 3))
+    print(round(rms_avg, 3))
+    print(round(harm_avg, 3))
+    print(round(geo_avg, 3))
 
 if __name__ == '__main__':
     main()
