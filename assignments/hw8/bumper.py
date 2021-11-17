@@ -1,6 +1,6 @@
 """
 Author: Stephanie Pittman
-CSCI 220
+CSCI: 220
 
 Certificate of Authenticity:
 I hear by certify that this is my own work and I discussed this with Tutor Brooke Duvall
