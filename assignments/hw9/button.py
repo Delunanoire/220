@@ -13,34 +13,36 @@ from graphics import *
 
 
 class Button:
-    def __init__(self, rectangle_shape, string_label):
+    def __init__(self, shape, label):
 
-        self.rectangle_shape = rectangle_shape
+        self.shape = shape
+        self.label = label
 
-        center = self.rectangle_shape.getCenter()
-        self.rectangle_shape.setFill('white')
+        center = self.shape.getCenter()
+        self.shape.setFill('white')
 
-        self.string_label = Text(center, string_label)
+        self.label = Text(center, label)
 
     def draw(self, win):
-        self.rectangle_shape.draw(win)
-        self.string_label.draw(win)
+        self.shape.draw(win)
+        self.label.draw(win)
 
     def undraw(self):
-        self.rectangle_shape.undraw()
-        self.string_label.undraw()
+        self.shape.undraw()
+        self.label.undraw()
 
     def is_clicked(self, point):
-        return self.rectangle_shape.getP1().getX() <= point.getX() <= self.rectangle_shape.getP2().getX() and \
-        self.rectangle_shape.getP1().getY() <= point.getY() <= self.rectangle_shape.getP2().getY()
+        return self.shape.getP1().getX() <= point.getX() <= self.shape.getP2().getX() and \
+        self.shape.getP1().getY() <= point.getY() <= self.shape.getP2().getY()
 
     def get_label(self):
-        return self.string_label.getText()
+        return self.label.getText()
+
+    def set_label(self, label):
+        return self.label.setText(label)
 
     def color_button(self, color):
-        self.rectangle_shape.setFill(color)
-
-
+        self.shape.setFill(color)
 
 
 
