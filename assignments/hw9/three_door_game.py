@@ -26,9 +26,9 @@ def main():
     secret = Text(Point(5, 2), "Click to choose my door.")
     secret.draw(win)
 
-    widget = Rectangle(Point(2, 4), Point(4, 7))
-    widget_2 = Rectangle(Point(4, 4), Point(6, 7))
-    widget_3 = Rectangle(Point(6, 4), Point(8, 7))
+    widget = Rectangle(Point(2, 3.5), Point(3.5, 7))
+    widget_2 = Rectangle(Point(4, 3.5), Point(5.5, 7))
+    widget_3 = Rectangle(Point(6, 3.5), Point(7.5, 7))
 
     door_1 = Button(widget, "Door 1")
     door_1.draw(win)
